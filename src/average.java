@@ -33,7 +33,7 @@ public class average {
             for (int i = rangeStart; i <= rangeEnd; i++) {
                 if (i % 2 == 0) {
                     sum += i;
-                    evenNumbersCount ++;
+                    evenNumbersCount++;
                 }
             }
 
