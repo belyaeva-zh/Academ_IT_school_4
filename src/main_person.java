@@ -17,7 +17,7 @@ public class main_person {
 
         person human = new person(surname, name, middleName, age);
 
-        System.out.println("Возраст созданного объекта: " + human.getAge());
+        System.out.println("Год рождения созданного объекта: " + human.getBirthYear(age));
 
     }
 }

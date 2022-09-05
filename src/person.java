@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class person {
     private String name;
     private String middleName;
@@ -41,6 +43,11 @@ public class person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getBirthYear(int age) {
+        LocalDate currentDate = LocalDate.now();
+        return currentDate.getYear() - age;
     }
 
     @Override
