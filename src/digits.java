@@ -9,19 +9,16 @@ public class digits {
         int sumOfDigits = 0;
         int sumOfOddDigits = 0;
         int maxDigit = 0;
-        int buffer = 0;
 
-        if (number > 0) {
-            buffer = number;
-        } else if (number < 0) {
-            buffer = number * (-1);
+        if (number < 0) {
+            number = number * (-1);
         }
 
-        while (buffer > 0) {
-            sumOfDigits += buffer % 10;
-            if (buffer % 10 % 2 != 0) sumOfOddDigits += buffer % 10;
-            if (buffer % 10 > maxDigit) maxDigit = buffer % 10;
-            buffer = buffer / 10;
+        while (number > 0) {
+            sumOfDigits += number % 10;
+            if (number % 10 % 2 != 0) sumOfOddDigits += number % 10;
+            if (number % 10 > maxDigit) maxDigit = number % 10;
+            number = number / 10;
         }
 
         System.out.println("Сумма цифр числа равна " + sumOfDigits);
