@@ -11,7 +11,7 @@ public class digits {
         int maxDigit = 0;
 
         if (number < 0) {
-            number = number * (-1);
+            number = Math.abs(number);
         }
 
         while (number > 0) {
